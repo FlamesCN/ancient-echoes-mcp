@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ancient-echoes",
+  "version": "1.0.0",
+  "description": "Deterministic BaZi and Chinese metaphysics tools for AI agents.",
+  "homepage": "https://www.ancientechoes.ai",
+  "repository": "https://github.com/FlamesCN/ancient-echoes-mcp",
+  "license": "MIT",
+  "keywords": ["mcp", "bazi", "chinese-metaphysics", "astrology"]
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "ancient-echoes": {
+      "type": "streamable-http",
+      "url": "https://www.ancientechoes.ai/api/v1/mcp"
+    }
+  }
+}
