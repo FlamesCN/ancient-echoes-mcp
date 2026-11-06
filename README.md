@@ -19,6 +19,15 @@ skill and setup notes, so any client that speaks MCP can call the same versioned
 Every tool response carries `calculationCapability` / `calculationVersion` so results stay
 reproducible across releases.
 
+Listed in the official MCP Registry as
+[`io.github.FlamesCN/ancient-echoes-mcp`](https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.FlamesCN/ancient-echoes-mcp).
+Hosts that support [MCP Apps](https://modelcontextprotocol.io/extensions/apps/overview) render
+BaZi results as an interactive chart; other hosts get the same structured JSON.
+
+OAuth-capable connectors can discover the authorization server at
+`https://www.ancientechoes.ai/.well-known/oauth-protected-resource` and connect with a standard
+PKCE flow. Developers can keep using a Web API key in the `Authorization` header.
+
 ## 1. Get an API key
 
 Sign in at <https://www.ancientechoes.ai> and open **User Center → LingXi Devices**:
