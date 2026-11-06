@@ -63,6 +63,16 @@ The server speaks protocol versions `2026-07-28`, `2025-11-25`, `2025-06-18` and
 </details>
 
 <details>
+<summary>Agent Plugins (Cursor Directory / compatible clients)</summary>
+
+This repository is also a portable [Agent Plugin](https://agent-plugins.org): `plugin.json`
+declares the package, `mcp.json` points at the remote endpoint, and `skills/ancient-echoes/`
+carries the usage skill. Clients that support the standard can load the repository directly;
+others can copy `skills/` and `mcp.json` into their own plugin directory.
+
+</details>
+
+<details>
 <summary>Verify with curl (2026-07-28)</summary>
 
 ```bash
