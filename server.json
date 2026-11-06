@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.flamescn/ancient-echoes-mcp",
+  "name": "io.github.FlamesCN/ancient-echoes-mcp",
   "title": "Ancient Echoes",
   "description": "Deterministic BaZi and Chinese metaphysics tools for AI agents: charts, divination, almanac.",
   "version": "1.0.0",
