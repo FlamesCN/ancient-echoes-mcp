@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.flamescn/ancient-echoes-mcp",
+  "title": "Ancient Echoes",
+  "description": "Deterministic Chinese metaphysics computation over MCP: BaZi, Zi Wei Dou Shu, Qi Men, Qi Zheng Si Yu, Vedic and Western astrology, divination, almanac and election-day evidence. All tools are read-only and return calculation capability/version.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/FlamesCN/ancient-echoes-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://www.ancientechoes.ai/lingxi",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://www.ancientechoes.ai/api/v1/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer token: a Web API Key (sk-...) from https://www.ancientechoes.ai/user/lingxi/devices or an OAuth 2.1 access token issued for this MCP endpoint.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
