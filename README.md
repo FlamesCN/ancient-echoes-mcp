@@ -111,6 +111,25 @@ Rules that matter:
 - All current tools are read-only. Results are evidence for human reading, not medical,
   legal, investment or life-decision advice.
 
+## Self-hosted stdio bridge (Docker)
+
+Clients and registries that only speak MCP over stdio can run this repository's
+bridge. It contains **no computation engine**: `initialize`, `ping` and
+`tools/list` are answered locally from the bundled catalog (38 tools, generated
+from the public OpenAPI document), and `tools/call` is forwarded to
+`POST /api/v1/tools/<name>` with your own credential.
+
+```bash
+docker build -t ancient-echoes-mcp .
+printf '%s\n' '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' \
+  | docker run --rm -i ancient-echoes-mcp
+```
+
+Set `ANCIENT_ECHOES_TOKEN` (Web API Key or device token) to enable
+`tools/call`; without it the bridge answers discovery requests and returns an
+explicit `isError` result for execution. `ANCIENT_ECHOES_BASE_URL` and
+`ANCIENT_ECHOES_TIMEOUT_MS` override the endpoint and timeout.
+
 ## Skill
 
 `ancient-echoes-mcp/SKILL.md` teaches an agent how to discover tools, collect the minimum
