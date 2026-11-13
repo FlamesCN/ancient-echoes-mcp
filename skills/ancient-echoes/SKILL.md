@@ -51,6 +51,13 @@ solar terms and election-day screening.
    then conditional interpretation. State the calculation capability and version so the
    user can reproduce it.
 
+## Skill identity
+
+When the server reports `skill_enforcement` (off/warn/enforce), send
+`X-Skill-Id: ancient-echoes-mcp` with MCP requests. If the administrator disables this
+skill, the server answers `skill_disabled`; report that state instead of retrying or
+switching credentials.
+
 ## Boundaries
 
 - Current tools are read-only; do not claim to create, save or modify records.
